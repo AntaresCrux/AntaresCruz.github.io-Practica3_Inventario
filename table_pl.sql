@@ -6,15 +6,26 @@ CREATE TABLE IF NOT EXISTS producto (
     PRIMARY KEY (idProd)
 );
 
+//Registros de prueba
 INSERT INTO producto (nombre, precio, existencia) VALUES 
 ('Gato de Juguete', 15.99, 10),
 ('Rascador de Gatos', 25.50, 5),
 ('Comida para Gatos', 20.00, 50);
 
+//PL para obtener productos//
+DELIMITER //
+
 CREATE PROCEDURE ObtenerProductos()
 BEGIN
     SELECT * FROM producto;
-END
+END //
+
+DELIMITER ;
+
+
+
+//PL para insertar productos//
+DELIMITER //
 
 CREATE PROCEDURE InsertarProducto(
     IN p_nombre VARCHAR(100),
@@ -29,7 +40,14 @@ BEGIN
         INSERT INTO producto (nombre, precio, existencia) 
         VALUES (p_nombre, p_precio, p_existencia);
     END IF;
-END
+END //
+
+DELIMITER ;
+
+
+
+//PL para eliminar productos//
+DELIMITER //
 
 CREATE PROCEDURE EliminarProducto(IN p_idProd INT)
 BEGIN
@@ -43,4 +61,7 @@ BEGIN
     ELSE
         DELETE FROM producto WHERE idProd = p_idProd;
     END IF;
-END
+END //
+
+DELIMITER ;
+
