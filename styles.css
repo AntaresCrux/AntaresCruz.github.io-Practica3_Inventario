@@ -1,0 +1,117 @@
+body {
+    font-family: "Source Code Pro", monospace;
+    background-image: url('Resource/BackDegradeCorp.png'); /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    color: #ffffff;
+    margin: 0;
+    padding: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    height: 400px;
+    margin: auto;
+    background: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #b995ff;
+    font-size: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #bababa;
+}
+
+input[type="submit"] {
+    background: #b995ff;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: "Source Code Pro", monospace;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background: #b995ff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #c0c0c0;
+    color: #000;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+    font-size: 12px;
+}
+
+th {
+    background: #b995ff;
+    color: #000;
+}
+
+tr:hover {
+    background: #333;
+}
+
+.btn {
+    color: #fc1c49;
+    text-decoration: none;
+}
+
+.btn.eliminar:hover {
+    text-decoration: underline;
+}
+
+.table-container {
+    height: 320px; 
+    width: 600px;
+    overflow-y: auto; 
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+th {
+    background: #b995ff;
+    color: #000;
+}
+
+tr:hover {
+    background: #e4e4e4;
+}
