@@ -2,7 +2,8 @@
 include 'conexion.php'; // Archivo de conexión a la base de datos
 
 // Consulta SQL para obtener todos los productos
-$sql = "CALL ObtenerProductos()";
+//$sql = "CALL ObtenerProductos()";
+$sql = "SELECT * FROM producto";
 $result = $conn->query($sql);
 ?>
 

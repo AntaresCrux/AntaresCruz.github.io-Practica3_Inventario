@@ -8,8 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $existencia = $_POST['existencia'];
 
     // Consulta SQL para insertar el producto
-    //$sql = "INSERT INTO producto (nombre, precio, existencia) VALUES ('$nombre', '$precio', '$existencia')";
-    $sql = "CALL InsertarProducto('$nombre', '$precio', '$existencia')";
+    $sql = "INSERT INTO producto (nombre, precio, existencia) VALUES ('$nombre', '$precio', '$existencia')";
+    //$sql = "CALL InsertarProducto('$nombre', '$precio', '$existencia')";
 
     if ($conn->query($sql) === TRUE) {
         // Redirecciona a index.php después de insertar el producto
